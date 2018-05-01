@@ -1,16 +1,26 @@
 {
     "disabled": false,
+
     "bindings": [
       {
-        "authLevel": "function",
+        "name": "req",
         "type": "httpTrigger",
-        "direction": "in",
-        "name": "req"
+        "authLevel": "function",
+        "direction": "in"
       },
       {
+        "name": "res",
         "type": "http",
-        "direction": "out",
-        "name": "res"
+        "direction": "out"
+      },
+      {
+        "name": "timeRecord",
+        "type": "documentDB",
+        "databaseName": "Condik",
+        "collectionName": "UserInput",
+        "createIfNotExists": true,
+        "connection": "MyAccount_COSMOSDB",     
+        "direction": "out"
       }
     ]
   }
