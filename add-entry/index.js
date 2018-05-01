@@ -13,7 +13,7 @@ module.exports = function (context, req) {
 
         context.res = {
             // status: 200, /* Defaults to 200 */
-            body: "Hello " + employeeId
+            body: "Hello " + employeeId + " .Cosmos DB"
         };
     }
     else {
