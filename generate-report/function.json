@@ -1,0 +1,19 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "name": "generateReport",
+      "type": "documentDB",
+      "databaseName": "condik-db",
+      "collectionName": "UserInput",
+      "connection": "cosmosdb-condik-record-entry-ConnectionString",
+      "sqlQuery": "SELECT * from c where c.name = {name} AND STARTSWITH(time, {today})",
+      "direction": "in"
+    },
+    {
+      "name": "$return",
+      "type": "http",
+      "direction": "out"
+    }
+  ]
+}

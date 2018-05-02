@@ -1,26 +1,26 @@
 {
-    "disabled": false,
+  "disabled": false,
 
-    "bindings": [
-      {
-        "name": "req",
-        "type": "httpTrigger",
-        "authLevel": "function",
-        "direction": "in"
-      },
-      {
-        "name": "res",
-        "type": "http",
-        "direction": "out"
-      },
-      {
-        "name": "timeRecord",
-        "type": "documentDB",
-        "databaseName": "condik-db",
-        "collectionName": "UserInput",
-        "createIfNotExists": true,
-        "connection": "condik-record-entry-ConnectionString",     
-        "direction": "out"
-      }
-    ]
-  }
+  "bindings": [
+    {
+      "name": "req",
+      "type": "httpTrigger",
+      "authLevel": "function",
+      "direction": "in"
+    },
+    {
+      "name": "res",
+      "type": "http",
+      "direction": "out"
+    },
+    {
+      "name": "timeRecord",
+      "type": "documentDB",
+      "databaseName": "condik-db",
+      "collectionName": "UserInput",
+      "createIfNotExists": true,
+      "connection": "cosmosdb-condik-record-entry-ConnectionString",
+      "direction": "out"
+    }
+  ]
+}
