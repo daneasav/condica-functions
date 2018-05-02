@@ -3,7 +3,7 @@ module.exports = function (context, req) {
 
     if (req.query.name || (req.body && req.body.name)) {
         let employeeId = (req.query.name || req.body.name)
-        let time = (req.query.time || req.body.time || new Date())
+        let time = new Date()
 
         // write to cosmos DB
         context.bindings.timeRecord = JSON.stringify({ 
@@ -21,6 +21,6 @@ module.exports = function (context, req) {
             body: "Please pass a name on the query string or in the request body"
         };
     }
-    
+
     context.done();
 };
