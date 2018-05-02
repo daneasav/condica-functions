@@ -7,7 +7,7 @@
       "databaseName": "condik-db",
       "collectionName": "UserInput",
       "connection": "cosmosdb-condik-record-entry-ConnectionString",
-      "sqlQuery": "SELECT * from c where c.name = {name} AND STARTSWITH(time, {today})",
+      "sqlQuery": "SELECT * FROM c WHERE c.name = {name} AND STARTSWITH(c.time, {today})",
       "direction": "in"
     },
     {
